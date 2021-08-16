@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
 
-    <script src="/landing_page.js"></script>
+    <script src="landing_page.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
          <div style="padding: 50px;">
             <iframe src="https://www.youtube.com/embed/tUUQOfkAES8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
-         <button class="btn btn-outline-danger mb-3 "> لطلب الكورس اضغط هنا</button>
+         <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
         
      </div>
     
@@ -157,7 +157,7 @@
 
      </div>
 
-     <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+     <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
       </div>
        
 
@@ -170,7 +170,7 @@
     
                 <div class="p-3 container">
                     <div id="demo"> </div>
-                    <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+                    <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
                  </div>
             
         
@@ -205,7 +205,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-              <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+              <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
         </div>
 
 
@@ -225,7 +225,7 @@
 
 
       </div>
-      <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+      <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
 
     </section>
 
@@ -244,7 +244,7 @@
          </div>
 
       </div>
-      <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+      <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
     </section>
 
     <section class="sec8">
@@ -252,7 +252,7 @@
         <div class="row">
          <div class="col-lg-4 col-sm-12"> 
           <h1 class="ml2 ">نموذج لشهاده الحضور</h1>
-          <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+          <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
          </div>
         
           
@@ -272,7 +272,7 @@
       
       <div class="col-lg-4 col-sm-12">
         <h1 class="ml2">امكانيه اعتماد الشهاده من المعهد العربى للدراسات و موثقه من الخارجيه المصريه</h1>
-        <button class="btn btn-outline-danger "> لطلب الكورس اضغط هنا</button>
+        <button class="btn btn-danger mb-3 " onclick="Buy()" > لطلب الكورس اضغط هنا</button>
       
       </div>
     </div>
@@ -280,6 +280,8 @@
      
 
     </section>
+
+
 
     
    
@@ -296,147 +298,8 @@
 
 
 
- <script>
-   // animation count down
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
-    
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-    
-      // Get today's date and time
-      var now = new Date().getTime();
-        
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-        
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-        
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-
-//animation section 8
-
-    var textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 950,
-    delay: (el, i) => 70*i
-  }).add({
-    targets: '.ml2',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-
-//animation first section
-  anime.timeline({loop: true})
-  .add({
-    targets: '.ml15 .word',
-    scale: [14,1],
-    opacity: [0,1],
-    easing: "easeOutCirc",
-    duration: 800,
-    delay: (el, i) => 800 * i
-  }).add({
-    targets: '.ml15',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-//animation section 1
-  var textWrapper = document.querySelector('.ml1 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml1 .letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 600,
-    delay: (el, i) => 70 * (i+1)
-  }).add({
-    targets: '.ml1 .line',
-    scaleX: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 700,
-    offset: '-=875',
-    delay: (el, i, l) => 80 * (l - i)
-  }).add({
-    targets: '.ml1',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-// ANIMATION ML5
-  anime.timeline({loop: true})
-  .add({
-    targets: '.ml5 .line',
-    opacity: [0.5,1],
-    scaleX: [0, 1],
-    easing: "easeInOutExpo",
-    duration: 700
-  }).add({
-    targets: '.ml5 .line',
-    duration: 600,
-    easing: "easeOutExpo",
-    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
-  }).add({
-    targets: '.ml5 .ampersand',
-    opacity: [0,1],
-    scaleY: [0.5, 1],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=600'
-  }).add({
-    targets: '.ml5 .letters-left',
-    opacity: [0,1],
-    translateX: ["0.5em", 0],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=300'
-  }).add({
-    targets: '.ml5 .letters-right',
-    opacity: [0,1],
-    translateX: ["-0.5em", 0],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=600'
-  }).add({
-    targets: '.ml5',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-
-    </script>
-  
+ 
+  <script src="landing_page.js"></script>
     
 </body>
 </html>
